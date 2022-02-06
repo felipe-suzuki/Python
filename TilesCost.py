@@ -52,4 +52,4 @@ user_info()
 
 calculate_cost(w,h,p)
 
-quit = input('\nPress any key to exit.')
+input('\nPress any key to exit.')
