@@ -17,26 +17,26 @@ def user_info():
         if w == 0.0:
             print('\n\tPlease, insert a value greater than 0!')
             
-        while h == 0:
+    while h == 0:
             
-            try:
-                h = float(input('Insert the height of the floor plan (insert the value in meters): '))
+        try:
+            h = float(input('Insert the height of the floor plan (insert the value in meters): '))
             
-            except:
-                print('\n\tNot a valid number!')
-            if h == 0.0:
-                print('\n\tPlease, insert a value greater than 0!')
+        except:
+            print('\n\tNot a valid number!')
+        if h == 0.0:
+            print('\n\tPlease, insert a value greater than 0!')
             
-            while p== 0:
+    while p== 0:
                 
-                try:
-                    p = float(input('Insert the price of the tiles (insert the value per square meter): '))
+        try:
+            p = float(input('Insert the price of the tiles (insert the value per square meter): '))
             
-                except:
-                    print('\n\tNot a valid number!')
+        except:
+            print('\n\tNot a valid number!')
                     
-                if p == 0.0:
-                    print('\n\tPlease, insert a value greater than 0!')
+        if p == 0.0:
+            print('\n\tPlease, insert a value greater than 0!')
         
     print (f'\nThe floor has width of {w} m and height of {h} m and the tile price is {p} US$ per m².')    
 
