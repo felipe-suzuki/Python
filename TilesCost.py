@@ -45,7 +45,7 @@ def calculate_cost(w,h,p):
     area = w*h
     total_cost = area*p
     
-    print(f'\nThe total tile cost to cover an area of {area:0.2f} m² is {total_cost:0.2f} US$.')
+    print(f'\nThe total tile cost to cover an area of {area:0.2f} m² is US$ {total_cost:0.2f} .')
 
 
 user_info()
