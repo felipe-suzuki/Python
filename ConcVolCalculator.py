@@ -1,3 +1,8 @@
+# This program can calculate the Volume or the Concentration of a solution that can be diluted into a final Volume and Concentration.
+# In this problem, the user should input three variables (Final Concentration, Final Volume, and Initial Concentration or Initial Volume)
+# to get the Forth unknown variable.
+# This program is being updated and improved, and I will be uploading other versions soon.
+
 # mass_unit = {1:'g', 3:'dg', 4:'cg', 5:'mg', 6:'ug', 7:'ng', 8:'pg'}
 # volume_unit = {1:'L', 2:'dL', 3:'cL', 4:'mL', 5:'uL', 6:'nL', 7:'pL'}
 mass_unit = {1:10**0, 2:10**-1, 3:10**-2, 4:10**-3, 5:10**-6, 6:10**-9, 7:10**-12}
