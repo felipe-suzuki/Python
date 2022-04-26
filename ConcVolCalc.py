@@ -1,3 +1,5 @@
+#PLEASE CHECK THE UPDATED VERSIONS FOR CODE CHANGES AND IMPROVEMENTS. THANK YOU!
+
 # This program can calculate the Volume or the Concentration of a solution that can be diluted into a final Volume and Concentration.
 # In this problem, the user should input three variables (Final Concentration, Final Volume, and Initial Concentration or Initial Volume)
 # to get the Forth unknown variable.
