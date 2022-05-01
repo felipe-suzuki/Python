@@ -57,24 +57,30 @@ def run_again():
 #---------------- SCRIPT ----------------#
 
 while True:
-    print('\nWelcome to Solution Dilution Calculator!')
+
+    print('Welcome to Solution Dilution Calculator!')
     
     # Declare and reset variables
     m_unit = {1:(10**0, 'g'), 2:(10**-3, 'mg'), 3:(10**-6, '\u03BCg'), 4:(10**-9, 'ng')}
     V_unit = {1:(10**0, 'L'), 2:(10**-3, 'mL'), 3:(10**-6, '\u03BCL'), 4:(10**-9, 'nL')}
-    c1, v1, c2, v2 = (0, 0, 0, 0)
-    
+    c1, v1, c2, v2, c1check, c2check = (0, 0, 0, 0, 0, 0)
+       
     # Insert the initial solution concentration
     c1 = Concentration(getValue(c1, 'initial', 'concentration'), m_unit[get_massUnit(c1, 'initial')], \
                        V_unit[get_Vunit(c1, 'initial', 'concentration')])
+    c1check = (c1.value*((c1.m[0])/(c1.V[0])))
+    c2check = c1check + 1
     
     # Insert the initial volume of the solution 
     v1 = Volume(getValue(v1, 'initial', 'Volume'), V_unit[get_Vunit(v1, 'initial', 'solution')])
     
     # Insert the final diluted solution concentration
-    c2 = Concentration(getValue(c2, 'final', 'diluted concentration'), m_unit[get_massUnit(c2, 'final')], \
-                       V_unit[get_Vunit(c2, 'final', 'diluted concentration')])
-      
+    while c2check >= c1check:
+        print('\nIMPORTANT! THE FINAL CONCENTRATION MUST BE LOWER THAN INITIAL!')
+        c2 = Concentration(getValue(c2, 'final', 'diluted concentration'), m_unit[get_massUnit(c2, 'final')], \
+                           V_unit[get_Vunit(c2, 'final', 'diluted concentration')])
+        c2check = (c2.value*((c2.m[0])/(c2.V[0])))
+        
     # Calculate the final volume of the diluted solution
     v2 = calc_dilution()
     
